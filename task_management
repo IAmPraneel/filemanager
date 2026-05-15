@@ -1,0 +1,11 @@
+sudo apt update
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs git
+
+cd ~
+git clone https://github.com/IAmPraneel/LP2.git mern
+sudo chown -R $USER:$USER ~/mern
+
+cd ~/mern/task_management
+npm install
+node server.js
