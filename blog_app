@@ -1,0 +1,18 @@
+# Update system and install Node.js 20.x + git
+sudo apt update
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs git
+
+# Clone repository
+cd ~
+git clone https://github.com/IAmPraneel/LP2.git mern
+
+# Fix ownership (prevents permission errors)
+sudo chown -R $USER:$USER ~/mern
+
+# Go to the blog app folder
+cd ~/mern/blog_app
+
+# Install dependencies and start server
+npm install
+node server.js
