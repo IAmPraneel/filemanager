@@ -1,0 +1,18 @@
+# Install Node.js 20.x + git (if not already installed)
+sudo apt update
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs git
+
+# Clone repository
+cd ~
+git clone https://github.com/IAmPraneel/LP2.git mern
+
+# Fix ownership
+sudo chown -R $USER:$USER ~/mern
+
+# Go to the student management folder
+cd ~/mern/student_management
+
+# Install and run
+npm install
+node server.js
