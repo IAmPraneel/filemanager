@@ -1,0 +1,29 @@
+
+# Azure Portal → Virtual Machines → VM1 / VM2 → Networking
+# Ensure BOTH VMs have:
+# - Same Virtual Network (VNet)
+# - Same Subnet
+# - Private IPs assigned (example: 10.0.0.4 / 10.0.0.5)
+
+ssh VM1@<VM1-public-ip>
+
+# Inside VM1:
+ping <VM2-private-ip>
+
+ping 10.0.0.5
+
+
+ SSH FROM VM1 → VM2
+ssh VM2@10.0.0.5
+
+# Exit back to VM1:
+exit
+
+# create a file
+nano file.txt
+
+scp file.txt VM2@10.0.0.5:/home/VM2/
+
+# SET FILE PERMISSIONS (VM2)
+chmod 600 file.txt
+ls -l file.txt
