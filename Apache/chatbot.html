@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chatbot</title>
+    <style>
+        .chat{width: 300px;}
+        .box{height: 300px;}
+    </style>
+    </head>
+</html>
+
+<body>
+    <div class="chat">
+        <h2>Chatbot </h2>
+        <div class="box" id="box">BOT: Hello! type 'menu' </div>
+        <input id = "inp"><button onclick="send()">Sent</button>
+    </div>
+</body>
+
+<script>
+function add(t){
+    box.innerHTML += "<br>"+t+"<br>";
+    box.scrollTop = box.scrollHeight;
+}
+
+function reply(msg){
+    msg = msg.toLowerCase();
+    if(/hi|hello|hey/.test(msg)) return "Bot: Hello! type 'menu' for more help";
+    return "Bot: Didn't understand, vapas bol";
+}
+
+function send(){
+    let m = inp.value;
+    add("You: "+m);
+    add(reply(m));
+    inp.value = "";
+}
+</script>
+</body>
+</html>
