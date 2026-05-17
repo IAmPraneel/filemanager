@@ -13,7 +13,7 @@ cd /var/www/html
 sudo rm -rf *
 
 # 5) Clone your GitHub repo
-sudo git clone https://github.com/IAmPraneel/LP2.git .
+sudo git clone https://github.com/git/LP2.git .
 
 # 6) Go into your project folder (if needed)
 cd static_site
