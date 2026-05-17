@@ -5,7 +5,7 @@ sudo apt install -y nodejs git
 
 # Clone repository
 cd ~
-git clone https://github.com/IAmPraneel/LP2.git mern
+git clone https://github.com/git/LP2.git mern
 
 # Fix ownership (prevents permission errors)
 sudo chown -R $USER:$USER ~/mern
