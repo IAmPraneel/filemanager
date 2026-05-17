@@ -1,0 +1,37 @@
+```
+# 1) SSH into VM
+
+# 2) Start / enable Apache (if not already running)
+sudo apt update
+sudo apt install apache2 -y
+sudo systemctl enable apache2
+sudo systemctl start apache2
+
+# 3) Go to Apache web root
+cd /var/www/html
+
+# 4) Remove default/old files (optional but recommended)
+sudo rm -rf *
+
+# 5) Clone your GitHub repo
+sudo git clone https://github.com/IAmPraneel/LP2.git .
+
+# 6) Go into your project folder (if needed)
+cd static_site
+
+# 7) Move frontend files to Apache root
+sudo mv * /var/www/html/
+cd /var/www/html
+
+# 8) Remove leftover folder (if empty)
+sudo rm -rf static_site LP2
+
+# 9) Set correct permissions
+sudo chown -R www-data:www-data /var/www/html
+sudo chmod -R 755 /var/www/html
+
+# 10) Restart Apache
+sudo systemctl restart apache2
+
+# 11) Open in browser
+```
