@@ -3,7 +3,7 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs git
 
 cd ~
-git clone https://github.com/IAmPraneel/LP2.git mern
+git clone https://github.com/git/LP2.git mern
 sudo chown -R $USER:$USER ~/mern
 
 cd ~/mern/E_commerce
